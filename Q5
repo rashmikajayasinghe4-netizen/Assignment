@@ -1,0 +1,36 @@
+class Calculator {
+
+    public int add(int a, int b) {
+        return a + b;
+    }
+
+    public int multiply(int a, int b) {
+        return a * b;
+    }
+
+    public int square(int a) {
+        return a * a;
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+
+        Calculator cal = new Calculator();
+
+        int result1 = cal.square(
+                cal.add(
+                        cal.multiply(3, 4),
+                        cal.multiply(5, 7)
+                )
+        );
+
+        int result2 = cal.add(
+                cal.square(cal.add(4, 7)),
+                cal.square(cal.add(8, 3))
+        );
+
+        System.out.println("(3 * 4 + 5 * 7)^2 = " + result1);
+        System.out.println("(4 + 7)^2 + (8 + 3)^2 = " + result2);
+    }
+}
