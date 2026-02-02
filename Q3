@@ -1,0 +1,19 @@
+class EvenOddNumber {
+    public boolean findEvenOrOdd(int i) {
+        return i % 2 == 0;
+    }
+}
+
+public class Demo {
+    public static void main(String[] args) {
+
+        EvenOddNumber obj = new EvenOddNumber();
+        int number = 10;
+
+        if (obj.findEvenOrOdd(number)) {
+            System.out.println("Even number");
+        } else {
+            System.out.println("Odd number");
+        }
+    }
+}
